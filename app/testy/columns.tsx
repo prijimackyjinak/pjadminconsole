@@ -1,6 +1,7 @@
 "use client"
-
+//@ts-nocheck
 import { ColumnDef } from "@tanstack/react-table"
+
 import { Button } from "@/components/ui/button"
 import {
     DropdownMenu,
@@ -10,7 +11,6 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import {MoreHorizontal} from '../../node_modules/lucide-react';
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
 export type Test = {

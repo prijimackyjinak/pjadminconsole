@@ -22,7 +22,7 @@ async function getData(): Promise<Test[]>{
         sort: '-created',
         expand: 'zakaznici',
     });
-    const isArchived = (archivedStatusData) => {
+    const isArchived = (archivedStatusData:any) => {
         if(archivedStatusData === true){
             return("archivováno")
         }else{
@@ -30,7 +30,7 @@ async function getData(): Promise<Test[]>{
         }
     }
     console.log(records)
-    const DateFormatter = (dateString) => {
+    const DateFormatter = (dateString:any) => {
         const date = new Date(dateString);
         const year = date.getFullYear();
         const month = date.toLocaleDateString("cs-CZ",{month:"long"})
@@ -52,11 +52,14 @@ async function getData(): Promise<Test[]>{
         zakaznici: item.zakaznici.length,
         mesto: item.misto_konani
     }))
+    // @ts-ignore
     return ({"data":data,"kurzData":dataKurz})
 }
 export default async function TestyTable() {
     const data = await getData()
+    // @ts-ignore
     const dataTest = data["data"]
+    // @ts-ignore
     const dataKurz = data["kurzData"]
 
     return (

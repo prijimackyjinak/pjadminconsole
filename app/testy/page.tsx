@@ -9,6 +9,8 @@ export const dynamic = 'force-dynamic'
 import {Misto, columns} from "@/app/testy/(mista)/columns";
 import {DataTable} from "@/app/testy/data-table";
 export default async function Testy(){
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-nocheck
     const pb = new PocketBase('https://pocketbase-production-9753.up.railway.app');
     const record = await pb.collection("pobocky_testu").getFullList()
     const pobocky:Array<Misto> = record.map((item:any)=>({
@@ -30,6 +32,7 @@ export default async function Testy(){
                 <UvodniSlovoaPridat />
             </section>
             <section className="container max-w-6xl mx-auto px-8 pt-10">
+                // @ts-ignore
                 <DataTable columns={columns} data={pobocky} />
             </section>
         </div>

@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: { id: string } }){
             : emptyData
 
 
-    const DateFormatter = (dateString) => {
+    const DateFormatter = (dateString:any) => {
         const date = new Date(dateString);
         const year = date.getFullYear();
         const month = date.toLocaleDateString("cs-CZ",{month:"long"})

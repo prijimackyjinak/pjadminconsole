@@ -4,11 +4,11 @@ import {useState} from "react";
 import { revalidatePath } from 'next/cache'
 interface misto{
     mesto:string;
-    ulice:string;
+    adresa:string;
 }
 interface mistoNove{
     mesto:string;
-    ulice:string;
+    adresa:string;
     picked:boolean;
 }
 export default function CreateNewTest({mista}:{mista:Array<misto>}){
