@@ -50,7 +50,8 @@ async function getData(): Promise<Test[]>{
         datum:DateFormatter(item.datum),
         status: isArchived(item.archived),
         zakaznici: item.zakaznici.length,
-        mesto: item.misto_konani
+        mesto: item.misto_konani,
+        fullPrice:item.fullprice
     }))
     // @ts-ignore
     return ({"data":data,"kurzData":dataKurz})

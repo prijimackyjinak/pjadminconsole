@@ -19,6 +19,7 @@ export type Test = {
     datum:string
     zakaznici: number
     mesto: string
+    fullPrice: boolean
 }
 
 export const columns: ColumnDef<Test>[] = [
@@ -43,5 +44,9 @@ export const columns: ColumnDef<Test>[] = [
     {
         accessorKey: "zakaznici",
         header: "Počet přihlášených",
+    },
+    {
+        accessorKey: "fullPrice",
+        header:"Plná cena",
     },
 ]
