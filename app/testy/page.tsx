@@ -8,7 +8,9 @@ export const revalidate = 0;
 export const dynamic = 'force-dynamic'
 import {Misto, columns} from "@/app/testy/(mista)/columns";
 import {DataTable} from "@/app/testy/data-table";
+
 export default async function Testy(){
+
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-nocheck
     const pb = new PocketBase('https://pocketbase-production-9753.up.railway.app');

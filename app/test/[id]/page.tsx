@@ -2,6 +2,8 @@ import UvodniSlovoTest from "@/app/test/(test-components)/uvodniSlovo";
 import PocketBase from "pocketbase";
 import {columns, Zakaznik} from "@/app/test/[id]/columns";
 import {DataTableZakaznici} from "@/app/test/[id]/data-table";
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 export default async function Page({ params }: { params: { id: string } }){
     interface ShortTest {
         datum:string;
